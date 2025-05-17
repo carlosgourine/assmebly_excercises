@@ -1,0 +1,6 @@
+*.wdb
+*.wed
+*.pdb
+*.err
+/*/debug/*.*
+/*/release/*.*
