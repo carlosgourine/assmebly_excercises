@@ -1,6 +1,6 @@
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 1  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
    1                         stm8/     
    2                         
@@ -59,9 +59,9 @@ Page 1  Assembler
   41  00500E                       .PC_CR2   DS.B     1             ; Port C control register 2
   42                         
   43                         ; Port D at 0x500f
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 2  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
   44                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
@@ -120,9 +120,9 @@ Page 2  Assembler
                                                                 ;register
   81  005065                       reserved5  DS.B     59            ; unused
   82                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 3  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
   83                         ; External Interrupt Control Register (ITC) at 0x50a0
   84                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -181,9 +181,9 @@ Page 3  Assembler
  123  0050E3                       reserved11  DS.B     13            ; unused
  124                         
  125                         ; Auto Wake-Up (AWU) at 0x50f0
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 4  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
  126                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
@@ -242,9 +242,9 @@ Page 4  Assembler
  168                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
  169  005240                       .UART2_SR  DS.B     1             ; UART2 Status Register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 5  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
  170  005241                       .UART2_DR  DS.B     1             ; UART2 Data Register
  171  005242                       .UART2_BRR1  DS.B     1             ; UART2 Baud Rate Register 1
@@ -303,9 +303,9 @@ Page 5  Assembler
  212  00526B                       .TIM1_CCR4H  DS.B     1             ; Data bits High
  213  00526C                       .TIM1_CCR4L  DS.B     1             ; Data bits Low
  214  00526D                       .TIM1_BKR  DS.B     1             ; TIM1 Break register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 6  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
  215  00526E                       .TIM1_DTR  DS.B     1             ; TIM1 Dead-time register
  216  00526F                       .TIM1_OISR  DS.B     1             ; TIM1 Output idle state 
@@ -364,9 +364,9 @@ Page 6  Assembler
  254  005328                       .TIM3_CNTRH  DS.B     1             ; Data bits High
  255  005329                       .TIM3_CNTRL  DS.B     1             ; Data bits Low
  256  00532A                       .TIM3_PSCR  DS.B     1             ; TIM3 Prescaler register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 7  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
  257  00532B                       .TIM3_ARRH  DS.B     1             ; Data bits High
  258  00532C                       .TIM3_ARRL  DS.B     1             ; Data bits Low
@@ -425,9 +425,9 @@ Page 7  Assembler
  307  005408                       .ADC_HTRH  DS.B     1             ; High Threshold Register High
  308  005409                       .ADC_HTRL  DS.B     1             ; High Threshold Register Low
  309  00540A                       .ADC_LTRH  DS.B     1             ; Low Threshold Register High
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 8  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
  310  00540B                       .ADC_LTRL  DS.B     1             ; Low Threshold Register Low
  311  00540C                       .ADC_AWSRH  DS.B     1             ; Analog Watchdog Status 
@@ -466,9 +466,9 @@ Page 8  Assembler
                                                                 ;register 7
  331                         
  332  007F77                                 end      
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 9  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
 Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
 
@@ -527,9 +527,9 @@ CLK_PCKENR2                           50CA         no  WORD  Internal   ABS    1
 CLK_CANCCR                            50CB         no  WORD  Internal   ABS    107  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 CLK_HSITRIMR                          50CC         no  WORD  Internal   ABS    108  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 CLK_SWIMCCR                           50CD         no  WORD  Internal   ABS    109  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 10  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
 CFG_GCR                               7F60         no  WORD  Internal   ABS    319  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 
@@ -588,9 +588,9 @@ PC_CR2                                500E         no  WORD  Internal   ABS     
 PD_ODR                                500F         no  WORD  Internal   ABS     45  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 PD_IDR                                5010         no  WORD  Internal   ABS     46  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 PD_DDR                                5011         no  WORD  Internal   ABS     47  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 11  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
 PD_CR1                                5012         no  WORD  Internal   ABS     48  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 PD_CR2                                5013         no  WORD  Internal   ABS     49  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
@@ -649,9 +649,9 @@ TIM1_BKR                              526D         no  WORD  Internal   ABS    2
 TIM1_DTR                              526E         no  WORD  Internal   ABS    215  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 TIM1_OISR                             526F         no  WORD  Internal   ABS    216  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 TIM2_CR1                              5300         no  WORD  Internal   ABS    221  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 12  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
 TIM2_IER                              5301         no  WORD  Internal   ABS    222  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 TIM2_SR1                              5302         no  WORD  Internal   ABS    223  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
@@ -710,9 +710,9 @@ UART2_CR5                             5248         no  WORD  Internal   ABS    1
 UART2_CR6                             5249         no  WORD  Internal   ABS    178  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 UART2_GTR                             524A         no  WORD  Internal   ABS    179  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 UART2_PSCR                            524B         no  WORD  Internal   ABS    180  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 13:02:13 2025
+STMicroelectronics list file postprocessor v1.01   (C)2009-2025   Sun May 18 18:41:47 2025
 Page 13  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
+                                               c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm
 
 
 WWDG_CR                               50D1         no  WORD  Internal   ABS    114  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
@@ -746,4 +746,4 @@ stm8                                  ????         no  WORD  Internal   rel     
 
 
 242 labels
-No errors on assembly of 'c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm'
+No errors on assembly of 'c:\users\carlo\pictures\computer architectures\session1\ca-labcourse-1\ca-labcourse-main\stm8s105c6.asm'

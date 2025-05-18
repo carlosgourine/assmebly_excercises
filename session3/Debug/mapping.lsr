@@ -1,6 +1,6 @@
-STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:00:48 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 18:38:17 2025
 Page 1  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\mapping.asm
+                                               c:\users\carlo\pictures\computer architectures\session3\mapping.asm
 
    1                         stm8/     
    2                                                          ;-------------------------------
@@ -60,17 +60,17 @@ Page 1  Assembler
                                                                 ; bits long
   25                                   segment  byte at 8000-807F 'vectit'
   26                         
-STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:00:48 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 18:38:17 2025
 Page 2  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\mapping.asm
+                                               c:\users\carlo\pictures\computer architectures\session3\mapping.asm
 
   27  008000                                 END      
-STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:00:48 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 18:38:17 2025
 Page 3  Assembler
-                                               c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\mapping.asm
+                                               c:\users\carlo\pictures\computer architectures\session3\mapping.asm
 
 Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
 
 
 0 labels
-No errors on assembly of 'c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\mapping.asm'
+No errors on assembly of 'c:\users\carlo\pictures\computer architectures\session3\mapping.asm'

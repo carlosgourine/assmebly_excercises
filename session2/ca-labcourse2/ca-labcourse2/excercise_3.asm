@@ -1,11 +1,13 @@
 stm8/
-  ;excercise2oflab3
+
 	#include "mapping.inc"
-  #include "stm8s105c6.inc"
+	#include "stm8s105c6.inc"
+	
 	segment 'ram0'
-loopcounter ds.b 1
-myArray ds.b 8
+
 	segment 'rom'
+mystring dc.b "Hello World!"
+
 main.l
 	; initialize SP
 	ldw X,#stack_end
@@ -44,19 +46,36 @@ clear_stack.l
 	incw X
 	cpw X,#stack_end	
 	jrule clear_stack
-	mov  loopcounter, #8
-	ld   A, #1
-	clrw  X
-fill_loop:
-  ld  (myArray,X), A
-	sla A
-	incw X
-	dec loopcounter
-	jrne fill_loop    ; if not zero, repeat
-	
+
+	mov     PB_DDR, #$01       ; PB0 = output
+	mov     PB_CR1, #$01       ; push-pull
+	mov     PB_ODR, #$00       ; LED off initially
+	call config_TIM3
+	mov   TIM3_ARRH, #$0F
+	mov   TIM3_ARRL, #$42
+	mov   TIM3_CR1, #%00000001
+	RIM
 infinite_loop.l
 	jra infinite_loop
+TIM3_ISR:
+	; Toggle PB0:
+	ld      A, PB_ODR
+	xor     A, #$01
+	ld      PB_ODR, A
+	bres    TIM3_SR1, #0
+	iret
 
+
+
+	
+config_TIM3
+	mov TIM3_CR1,#%00000000 ; TIM3 OFF 
+	mov TIM3_PSCR,#$07 ; prescaler x128 
+	bset TIM3_EGR,#0 ; force UEV to update prescaler 
+	mov TIM3_IER,#$01 ; TIM3 interrupt on update enabled
+	ret 
+	
+	
 	interrupt NonHandledInterrupt
 NonHandledInterrupt.l
 	iret
@@ -79,7 +98,7 @@ NonHandledInterrupt.l
 	dc.l {$82000000+NonHandledInterrupt}	; irq12
 	dc.l {$82000000+NonHandledInterrupt}	; irq13
 	dc.l {$82000000+NonHandledInterrupt}	; irq14
-	dc.l {$82000000+NonHandledInterrupt}	; irq15
+	dc.l {$82000000+TIM3_ISR}	; irq15
 	dc.l {$82000000+NonHandledInterrupt}	; irq16
 	dc.l {$82000000+NonHandledInterrupt}	; irq17
 	dc.l {$82000000+NonHandledInterrupt}	; irq18

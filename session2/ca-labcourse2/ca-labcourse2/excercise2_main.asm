@@ -1,11 +1,14 @@
 stm8/
-  ;excercise2oflab3
+
 	#include "mapping.inc"
-  #include "stm8s105c6.inc"
+	#include "stm8s105c6.inc"
+	
 	segment 'ram0'
-loopcounter ds.b 1
-myArray ds.b 8
+
+
 	segment 'rom'
+
+
 main.l
 	; initialize SP
 	ldw X,#stack_end
@@ -44,19 +47,42 @@ clear_stack.l
 	incw X
 	cpw X,#stack_end	
 	jrule clear_stack
-	mov  loopcounter, #8
-	ld   A, #1
-	clrw  X
-fill_loop:
-  ld  (myArray,X), A
-	sla A
-	incw X
-	dec loopcounter
-	jrne fill_loop    ; if not zero, repeat
+
+	mov   PD_DDR, #4
+	mov   PD_CR1, #4
+	bres  PA_DDR, #3
+	bset  PA_CR1, #3
+	bset  PA_CR2, #3
+	bres  PE_DDR, #5
+	bset  PE_CR1, #5
+	bset  PE_CR2, #5
+	mov   EXTI_CR1, #%00000010
+	mov   EXTI_CR2, #%00000010
+	call config_TIM2
+	mov   TIM2_ARRH, #$01
+	mov   TIM2_ARRL, #$8F
+	mov   TIM2_CCR1H, #$00
+	mov   TIM2_CCR1L, #$64
+	mov   TIM2_CCER1, #%00000001
+	mov   TIM2_CR1, #1
+	RIM
 	
 infinite_loop.l
 	jra infinite_loop
-
+  interrupt PA3_ISR
+PA3_ISR:
+	mov   TIM2_CR1, #1      ; start PWM
+	iret	
+  interrupt PE5_ISR
+PE5_ISR:
+	mov   TIM2_CR1, #0      ; stop PWM
+	iret
+config_TIM2:
+	mov     TIM2_CR1,   #%00000001 ; counter enable ON
+	mov     TIM2_IER,   #$00       ; no interrupts (PWM mode)
+	mov     TIM2_CCMR1, #%01100000 ; PWM mode 1, CC1 output
+	mov     TIM2_CCER1, #%00000000 ; CC1 output disabled (enabled in main)
+	ret
 	interrupt NonHandledInterrupt
 NonHandledInterrupt.l
 	iret
@@ -67,11 +93,11 @@ NonHandledInterrupt.l
 	dc.l {$82000000+NonHandledInterrupt}	; irq0
 	dc.l {$82000000+NonHandledInterrupt}	; irq1
 	dc.l {$82000000+NonHandledInterrupt}	; irq2
-	dc.l {$82000000+NonHandledInterrupt}	; irq3
+	dc.l {$82000000+PA3_ISR}	; irq3
 	dc.l {$82000000+NonHandledInterrupt}	; irq4
 	dc.l {$82000000+NonHandledInterrupt}	; irq5
 	dc.l {$82000000+NonHandledInterrupt}	; irq6
-	dc.l {$82000000+NonHandledInterrupt}	; irq7
+	dc.l {$82000000+PE5_ISR}	; irq7
 	dc.l {$82000000+NonHandledInterrupt}	; irq8
 	dc.l {$82000000+NonHandledInterrupt}	; irq9
 	dc.l {$82000000+NonHandledInterrupt}	; irq10

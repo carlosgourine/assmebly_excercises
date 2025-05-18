@@ -5,7 +5,7 @@ Keyword=ST7Project
 Number=1.3
 
 [Project]
-Name=excercise_2
+Name=rider2
 Toolset=ST Assembler Linker
 
 [Config]
@@ -14,19 +14,19 @@ Toolset=ST Assembler Linker
 
 [Config.0]
 ConfigName=Debug
-Target=excercise_2.s19
+Target=rider2.s19
 OutputFolder=Debug
 Debug=$(TargetFName)
 
 [Config.1]
 ConfigName=Release
-Target=excercise_2.s19
+Target=rider2.s19
 OutputFolder=Release
 Debug=$(TargetFName)
 
 [Root]
 ElemType=Project
-PathName=excercise_2
+PathName=rider2
 Child=Root.Source Files
 Config.0=Root.Config.0
 Config.1=Root.Config.1
@@ -52,7 +52,7 @@ Settings.1.6=Root.Config.1.Settings.6
 Settings.1.7=Root.Config.1.Settings.7
 
 [Root.Config.0.Settings.0]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=ST Assembler Linker
 String.100.1=ST7 Cosmic
 String.100.2=STM8 Cosmic
@@ -64,18 +64,18 @@ String.103.0=
 String.104.0=include
 String.105.0=
 String.106.0=Debug
-String.107.0=excercise_2.s19
+String.107.0=rider2.s19
 Int.108=0
 
 [Root.Config.0.Settings.1]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=$(TargetFName)
 String.101.0=
 String.103.0=.\;
 
 [Root.Config.0.Settings.2]
 String.2.0=
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=STM8S105C6
 
 [Root.Config.0.Settings.3]
@@ -83,13 +83,12 @@ String.2.0=Assembling $(InputFile)...
 String.3.0=asm -sym -li=$(IntermPath)$(InputName).lsr $(InputFile) $(ToolsetIncOpts) -obj=$(IntermPath)$(InputName).$(ObjectExt)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(InputName).lst
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 
 [Root.Config.0.Settings.4]
 String.2.0=Running Pre-Link step
-String.6.0=2025,5,18,11,36,2
-String.8.0=
+String.6.0=2025,5,17,21,37,29
 
 [Root.Config.0.Settings.5]
 String.2.0=Running ST linker
@@ -97,7 +96,7 @@ String.3.0=lyn $(ObjectFiles), $(OutputPath)$(TargetSName).cod, " "
 String.3.1=obsend $(OutputPath)$(TargetSName).cod,f,$(OutputPath)$(TargetSName).s19,s
 String.4.0=
 String.5.0=$(OutputPath)$(TargetSName).map $(OutputPath)$(TargetSName).cod $(OutputPath)$(TargetSName).grp $(OutputPath)$(TargetSName).sym
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=ram0:0x0-0xff
 String.100.1=ram1:0x100-0x5ff
 String.100.2=stack:0x600-0x7ff
@@ -111,14 +110,14 @@ String.2.0=Running Post-Link step
 String.3.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 String.4.0=
 String.5.0=
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Config.0.Settings.7]
 String.2.0=Running Post-Build step
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Config.1.Settings.0]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=ST Assembler Linker
 String.100.1=ST7 Cosmic
 String.100.2=STM8 Cosmic
@@ -130,18 +129,18 @@ String.103.0=
 String.104.0=include
 String.105.0=
 String.106.0=Release
-String.107.0=excercise_2.s19
+String.107.0=rider2.s19
 Int.108=0
 
 [Root.Config.1.Settings.1]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=$(TargetFName)
 String.101.0=
 String.103.0=.\;
 
 [Root.Config.1.Settings.2]
 String.2.0=
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=STM8S105C6
 
 [Root.Config.1.Settings.3]
@@ -149,12 +148,12 @@ String.2.0=Assembling $(InputFile)...
 String.3.0=asm -sym -li=$(IntermPath)$(InputName).lsr $(InputFile) $(ToolsetIncOpts) -obj=$(IntermPath)$(InputName).$(ObjectExt)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(InputName).lst
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 
 [Root.Config.1.Settings.4]
 String.2.0=Running Pre-Link step
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Config.1.Settings.5]
 String.2.0=Running ST linker
@@ -162,7 +161,7 @@ String.3.0=lyn $(ObjectFiles), $(OutputPath)$(TargetSName).cod, " "
 String.3.1=obsend $(OutputPath)$(TargetSName).cod,f,$(OutputPath)$(TargetSName).s19,s
 String.4.0=
 String.5.0=$(OutputPath)$(TargetSName).map $(OutputPath)$(TargetSName).cod $(OutputPath)$(TargetSName).grp $(OutputPath)$(TargetSName).sym
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=ram0:0x0-0xff
 String.100.1=ram1:0x100-0x5ff
 String.100.2=stack:0x600-0x7ff
@@ -176,11 +175,11 @@ String.2.0=Running Post-Link step
 String.3.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 String.4.0=
 String.5.0=
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Config.1.Settings.7]
 String.2.0=Running Post-Build step
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Source Files]
 ElemType=Folder
@@ -201,7 +200,7 @@ Settings.1.1=Root.Source Files.Config.1.Settings.1
 Settings.1.2=Root.Source Files.Config.1.Settings.2
 
 [Root.Source Files.Config.0.Settings.0]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.8.0=Debug
 Int.0=0
 Int.1=0
@@ -211,15 +210,15 @@ String.2.0=Assembling $(InputFile)...
 String.3.0=asm -sym -li=$(IntermPath)$(InputName).lsr $(InputFile) $(ToolsetIncOpts) -obj=$(IntermPath)$(InputName).$(ObjectExt)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(InputName).lst
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 
 [Root.Source Files.Config.0.Settings.2]
 String.2.0=Performing Custom Build on $(InputFile)
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Source Files.Config.1.Settings.0]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.8.0=Release
 Int.0=0
 Int.1=0
@@ -229,21 +228,21 @@ String.2.0=Assembling $(InputFile)...
 String.3.0=asm -sym -li=$(IntermPath)$(InputName).lsr $(InputFile) $(ToolsetIncOpts) -obj=$(IntermPath)$(InputName).$(ObjectExt)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(InputName).lst
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 
 [Root.Source Files.Config.1.Settings.2]
 String.2.0=Performing Custom Build on $(InputFile)
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Source Files.mapping.asm]
 ElemType=File
 PathName=mapping.asm
-Next=Root.Source Files.excercise2_main.asm
+Next=Root.Source Files.ridermain.asm
 
-[Root.Source Files.excercise2_main.asm]
+[Root.Source Files.ridermain.asm]
 ElemType=File
-PathName=excercise2_main.asm
+PathName=ridermain.asm
 Next=Root.Source Files.stm8s105c6.asm
 
 [Root.Source Files.stm8s105c6.asm]
@@ -268,7 +267,7 @@ Settings.1.1=Root.Include Files.Config.1.Settings.1
 Settings.1.2=Root.Include Files.Config.1.Settings.2
 
 [Root.Include Files.Config.0.Settings.0]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.8.0=Debug
 Int.0=0
 Int.1=0
@@ -278,15 +277,15 @@ String.2.0=Assembling $(InputFile)...
 String.3.0=asm -sym -li=$(IntermPath)$(InputName).lsr $(InputFile) $(ToolsetIncOpts) -obj=$(IntermPath)$(InputName).$(ObjectExt)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(InputName).lst
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 
 [Root.Include Files.Config.0.Settings.2]
 String.2.0=Performing Custom Build on $(InputFile)
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Include Files.Config.1.Settings.0]
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.8.0=Release
 Int.0=0
 Int.1=0
@@ -296,12 +295,12 @@ String.2.0=Assembling $(InputFile)...
 String.3.0=asm -sym -li=$(IntermPath)$(InputName).lsr $(InputFile) $(ToolsetIncOpts) -obj=$(IntermPath)$(InputName).$(ObjectExt)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(InputName).lst
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 String.100.0=abslist $(IntermPath)$(InputName).lsr -exe $(OutputPath)$(TargetFName)
 
 [Root.Include Files.Config.1.Settings.2]
 String.2.0=Performing Custom Build on $(InputFile)
-String.6.0=2025,5,18,11,36,2
+String.6.0=2025,5,17,21,37,29
 
 [Root.Include Files.mapping.inc]
 ElemType=File

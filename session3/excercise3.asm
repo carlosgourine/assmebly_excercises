@@ -4,7 +4,7 @@ stm8/
   #include "stm8s105c6.inc"
 	segment 'ram0'
 loopcounter ds.b 1
-myArray ds.b 8
+myArrayword ds.w 8
 	segment 'rom'
 main.l
 	; initialize SP
@@ -44,13 +44,13 @@ clear_stack.l
 	incw X
 	cpw X,#stack_end	
 	jrule clear_stack
-	mov  loopcounter, #8
-	ld   A, #1
-	clrw  X
+	mov  loopcounter, #9
+	ldw   X, #1
+	clrw  Y
 fill_loop:
-  ld  (myArray,X), A
-	sla A
-	incw X
+  ldw  (myArrayword,Y), X
+	sllw X
+	addw Y,#2
 	dec loopcounter
 	jrne fill_loop    ; if not zero, repeat
 	

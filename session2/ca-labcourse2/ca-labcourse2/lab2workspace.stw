@@ -12,9 +12,17 @@ Filename=exercise_1.stp
 Dependencies=
 
 [Project2]
+Filename=rider2.stp
+Dependencies=
+
+[Project3]
 Filename=excercise_2.stp
 Dependencies=
+
+[Project4]
+Filename=exercise_3.stp
+Dependencies=
 [Options]
-ActiveProject=excercise_2
+ActiveProject=exercise_3
 ActiveConfig=Debug
 AddSortedElements=1

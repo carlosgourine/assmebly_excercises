@@ -1,11 +1,13 @@
 stm8/
-  ;excercise2oflab3
+
 	#include "mapping.inc"
-  #include "stm8s105c6.inc"
-	segment 'ram0'
-loopcounter ds.b 1
-myArray ds.b 8
+	#include "stm8s105c6.inc"
+  segment 'ram0'
+ledVal      ds.b
+dirFlag     ds.b
 	segment 'rom'
+
+
 main.l
 	; initialize SP
 	ldw X,#stack_end
@@ -44,18 +46,57 @@ clear_stack.l
 	incw X
 	cpw X,#stack_end	
 	jrule clear_stack
-	mov  loopcounter, #8
-	ld   A, #1
-	clrw  X
-fill_loop:
-  ld  (myArray,X), A
-	sla A
-	incw X
-	dec loopcounter
-	jrne fill_loop    ; if not zero, repeat
+	mov     PB_DDR,#$FF ;port b outputs
+	mov     PB_CR1,#$FF ;push pull
+  ld      A,#$01 ;(binary 00000001),this lights LED0 on PB0
+	ld      ledVal,A ;store that initial value (0x01) in ram ledVal
+	clr     dirFlag ;set direction = 0,shift left first
+	ld      PB_ODR,A ;first led turned on?
+  call    config_TIM3
+	mov     TIM3_ARRH,#$3D ;in total H and L it should be 2Mhz/128,2Mhz/128*1=15625 and that should be 1 second dellay between leds
+	mov     TIM3_ARRL,#$09 
+	mov     TIM3_CR1,#%00000001 ;counter enabled 
+	RIM
 	
 infinite_loop.l
 	jra infinite_loop
+  interrupt TIM3_ISR ;interupt service routine
+TIM3_ISR:
+	
+	ld  A,TIM3_SR1  ;important to be able to clear status register later on it needs to be read first
+	clr  TIM3_SR1   ;satus register set to 0,No update has occurred
+	ld      A,ledVal           ;load accumulator with ledVal
+	btjt    dirFlag,#0,shiftRight   ; if dirFlag_0  equal to 1 jump to shiftRight
+shiftLeft:
+	sll     A ;move bits to the left                 
+	jrc     leftOverflow ;jump to leftOverflow if carry
+	ld      ledVal,A
+	ld     PB_ODR,A
+	iret
+leftOverflow:                      
+	bset    dirFlag,#0         ; enabling it to shift left next time
+	ld      A,#%10000000
+	ld      ledVal,A
+	ld     PB_ODR,A
+	iret
+shiftRight:
+	srl     A                  
+	jrc     rightOverflow
+	ld      ledVal,A
+	ld     PB_ODR,A
+	iret
+rightOverflow:                     ; hit the end -> bounce
+	bres    dirFlag,#0         ; now go left
+	ld      A,#$01
+	ld      ledVal,A
+	ld     PB_ODR,A
+	iret
+config_TIM3:
+	mov   TIM3_CR1,  #$00    ; timer OFF, keep rest of CR1 = 0
+	mov   TIM3_PSCR, #$07    ; prescaler 128  (16 MHz / 128 = 125 kHz)
+	bset  TIM3_EGR,  #0      ; UG = 1 ? generate an update to reload PSC
+	mov   TIM3_IER,  #$01    ; UIE = 1 ? enable update interrupt
+	ret
 
 	interrupt NonHandledInterrupt
 NonHandledInterrupt.l
@@ -79,7 +120,7 @@ NonHandledInterrupt.l
 	dc.l {$82000000+NonHandledInterrupt}	; irq12
 	dc.l {$82000000+NonHandledInterrupt}	; irq13
 	dc.l {$82000000+NonHandledInterrupt}	; irq14
-	dc.l {$82000000+NonHandledInterrupt}	; irq15
+	dc.l {$82000000+TIM3_ISR}	; irq15
 	dc.l {$82000000+NonHandledInterrupt}	; irq16
 	dc.l {$82000000+NonHandledInterrupt}	; irq17
 	dc.l {$82000000+NonHandledInterrupt}	; irq18

@@ -1,4 +1,4 @@
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 1  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -59,7 +59,7 @@ Page 1  Assembler
   41  00500E                       .PC_CR2   DS.B     1             ; Port C control register 2
   42                         
   43                         ; Port D at 0x500f
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 2  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -120,7 +120,7 @@ Page 2  Assembler
                                                                 ;register
   81  005065                       reserved5  DS.B     59            ; unused
   82                         
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 3  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -181,7 +181,7 @@ Page 3  Assembler
  123  0050E3                       reserved11  DS.B     13            ; unused
  124                         
  125                         ; Auto Wake-Up (AWU) at 0x50f0
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 4  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -242,7 +242,7 @@ Page 4  Assembler
  168                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
  169  005240                       .UART2_SR  DS.B     1             ; UART2 Status Register
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 5  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -303,7 +303,7 @@ Page 5  Assembler
  212  00526B                       .TIM1_CCR4H  DS.B     1             ; Data bits High
  213  00526C                       .TIM1_CCR4L  DS.B     1             ; Data bits Low
  214  00526D                       .TIM1_BKR  DS.B     1             ; TIM1 Break register
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 6  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -364,7 +364,7 @@ Page 6  Assembler
  254  005328                       .TIM3_CNTRH  DS.B     1             ; Data bits High
  255  005329                       .TIM3_CNTRL  DS.B     1             ; Data bits Low
  256  00532A                       .TIM3_PSCR  DS.B     1             ; TIM3 Prescaler register
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 7  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -425,7 +425,7 @@ Page 7  Assembler
  307  005408                       .ADC_HTRH  DS.B     1             ; High Threshold Register High
  308  005409                       .ADC_HTRL  DS.B     1             ; High Threshold Register Low
  309  00540A                       .ADC_LTRH  DS.B     1             ; Low Threshold Register High
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 8  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -466,7 +466,7 @@ Page 8  Assembler
                                                                 ;register 7
  331                         
  332  007F77                                 end      
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 9  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -527,7 +527,7 @@ CLK_PCKENR2                           50CA         no  WORD  Internal   ABS    1
 CLK_CANCCR                            50CB         no  WORD  Internal   ABS    107  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 CLK_HSITRIMR                          50CC         no  WORD  Internal   ABS    108  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 CLK_SWIMCCR                           50CD         no  WORD  Internal   ABS    109  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 10  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -588,7 +588,7 @@ PC_CR2                                500E         no  WORD  Internal   ABS     
 PD_ODR                                500F         no  WORD  Internal   ABS     45  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 PD_IDR                                5010         no  WORD  Internal   ABS     46  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 PD_DDR                                5011         no  WORD  Internal   ABS     47  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 11  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -649,7 +649,7 @@ TIM1_BKR                              526D         no  WORD  Internal   ABS    2
 TIM1_DTR                              526E         no  WORD  Internal   ABS    215  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 TIM1_OISR                             526F         no  WORD  Internal   ABS    216  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 TIM2_CR1                              5300         no  WORD  Internal   ABS    221  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 12  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
@@ -710,7 +710,7 @@ UART2_CR5                             5248         no  WORD  Internal   ABS    1
 UART2_CR6                             5249         no  WORD  Internal   ABS    178  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 UART2_GTR                             524A         no  WORD  Internal   ABS    179  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
 UART2_PSCR                            524B         no  WORD  Internal   ABS    180  public   bss          1     1  c:\program files (x86)\stmicroelectronics\st_toolset\asm\include\STM8S105C_S.asm
-STMicroelectronics assembler v4.52   (C)1987-2025   Sat May 17 16:30:25 2025
+STMicroelectronics assembler v4.52   (C)1987-2025   Sun May 18 13:02:13 2025
 Page 13  Assembler
                                                c:\users\carlo\pictures\computer architectures\session2\ca-labcourse2\ca-labcourse2\stm8s105c6.asm
 
